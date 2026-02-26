@@ -722,6 +722,12 @@
             "size_chart_page": ""
           }
         },
+        "liquid_EyNXtW": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Rating Widget</title>\n    <style>\n        body.uniqueBody_Ty83Kl {\n            font-family: Arial, sans-serif;\n        }\n\n        .ratingWidget_Wp76Nm {\n            display: flex;\n            align-items: center;\n        }\n\n        .profileImages_Qw59Br {\n            display: flex;\n            align-items: center;\n            margin-right: 20px;\n        }\n\n        .profileImages_Qw59Br img {\n            width: 30px;\n            height: 30px;\n            border-radius: 50%;\n            margin-right: -10px;\n            border: 2px solid white;\n        }\n\n        .nameAndVerified_Xz24Ft {\n            display: flex;\n            align-items: center;\n            margin-left: 15px;\n            font-size: 12px;\n        }\n\n        .purchaseText_Ym34Gh {\n            font-size: 12px;\n            margin-left: 5px;\n        }\n\n        #purchase-count {\n            font-weight: bold;\n            color: #000000; /* Siyah renk */\n            font-size: 14px; /* Biraz daha büyük */\n        }\n\n        @font-face {\n            font-family: \"CustomIcons\";\n            src: url(\"https://fonts.gstatic.com/s/materialsymbolsoutlined/v54/1f6ad2e0e7c7b3724793c4d8709a24a5.woff2\") format(\"woff2\");\n        }\n    </style>\n</head>\n<body class=\"uniqueBody_Ty83Kl\">\n\n    <div class=\"ratingWidget_Wp76Nm\">\n        <div class=\"profileImages_Qw59Br\">\n            <img src=\"https://randomuser.me/api/portraits/men/1.jpg\" alt=\"Profile 1\">\n            <img src=\"https://randomuser.me/api/portraits/women/1.jpg\" alt=\"Profile 2\">\n            <img class=\"uniqueReviewImage_Tz89Lp\" src=\"https://i.hizliresim.com/je7b0fg.jpg\" alt=\"Profile 3\">\n            <div class=\"nameAndVerified_Xz24Ft\">\n                <span>Burkisoy and <span id=\"purchase-count\">470</span> personnes ont acheté</span>\n            </div>\n        </div>\n    </div>\n\n    <script>\n        let purchaseCount = 470;\n        const purchaseCountElement = document.getElementById(\"purchase-count\");\n\n        function updatePurchaseCount() {\n            // Her seferde 1, 2 veya bazen 3 artış miktarı\n            let incrementAmount = Math.floor(Math.random() * 3) + 1;\n            purchaseCount += incrementAmount;\n            purchaseCountElement.textContent = purchaseCount;\n\n            // Sonraki artış süresini rastgele 2 ila 8 saniye arasında belirle\n            const nextUpdateDelay = Math.floor(Math.random() * 6000) + 2000;\n\n            setTimeout(updatePurchaseCount, nextUpdateDelay);\n        }\n\n        updatePurchaseCount();\n    </script>\n\n</body>\n</html>"
+          }
+        },
         "block-9": {
           "type": "buy_buttons",
           "settings": {
@@ -752,6 +758,7 @@
         "block-6",
         "liquid_9HbhpD",
         "block-8",
+        "liquid_EyNXtW",
         "block-9",
         "block-10",
         "block-11"
