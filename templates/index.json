@@ -121,6 +121,32 @@
         "overlay_opacity": 0
       }
     },
+    "section-9": {
+      "type": "before-after-image",
+      "settings": {
+        "full_width": false,
+        "subheading": "",
+        "title": "AVANT / APRÈS",
+        "content": "",
+        "before_image": "shopify://shop_images/Screenshot_2026-02-18_at_12.31.44.png",
+        "before_image_mobile": "shopify://shop_images/Screenshot_2026-02-18_at_12.31.44.png",
+        "after_image": "shopify://shop_images/Screenshot_2026-02-18_at_12.31.54.png",
+        "after_image_mobile": "shopify://shop_images/Screenshot_2026-02-18_at_12.31.54.png",
+        "expand_image": false,
+        "text_position": "center",
+        "before_after_text_position": "bottom",
+        "before_text": "",
+        "after_text": "",
+        "drag_initial_position": 39,
+        "background": "rgba(0,0,0,0)",
+        "background_gradient": "",
+        "text_color": "",
+        "before_text_color": "#ffffff",
+        "after_text_color": "#ffffff",
+        "drag_cursor_background": "#ffffff",
+        "drag_cursor_color": "#000000"
+      }
+    },
     "section-2": {
       "type": "image-link-blocks",
       "blocks": {
@@ -440,32 +466,6 @@
         "mobile_row_height": 150,
         "background": "",
         "background_gradient": ""
-      }
-    },
-    "section-9": {
-      "type": "before-after-image",
-      "settings": {
-        "full_width": false,
-        "subheading": "",
-        "title": "AVANT / APRÈS",
-        "content": "",
-        "before_image": "shopify://shop_images/Screenshot_2026-02-18_at_12.31.44.png",
-        "before_image_mobile": "shopify://shop_images/Screenshot_2026-02-18_at_12.31.44.png",
-        "after_image": "shopify://shop_images/Screenshot_2026-02-18_at_12.31.54.png",
-        "after_image_mobile": "shopify://shop_images/Screenshot_2026-02-18_at_12.31.54.png",
-        "expand_image": false,
-        "text_position": "center",
-        "before_after_text_position": "bottom",
-        "before_text": "",
-        "after_text": "",
-        "drag_initial_position": 39,
-        "background": "rgba(0,0,0,0)",
-        "background_gradient": "",
-        "text_color": "",
-        "before_text_color": "#ffffff",
-        "after_text_color": "#ffffff",
-        "drag_cursor_background": "#ffffff",
-        "drag_cursor_color": "#000000"
       }
     },
     "section-10": {
@@ -1061,12 +1061,12 @@
     "section-3",
     "rich_text_tWD7Lf",
     "section-7",
+    "section-9",
     "section-2",
     "section-4",
     "section-5",
     "section-6",
     "section-8",
-    "section-9",
     "section-10",
     "section-11",
     "section-12",
