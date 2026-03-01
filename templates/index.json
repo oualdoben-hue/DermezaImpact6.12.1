@@ -55,7 +55,7 @@
     "section-3": {
       "type": "scrolling-text",
       "settings": {
-        "full_width": true,
+        "full_width": false,
         "text": "BAZAAR ELLE   marie claire",
         "text_size": "large",
         "text_style": "fill",
@@ -97,7 +97,7 @@
       ],
       "name": "Rich text",
       "settings": {
-        "full_width": true,
+        "full_width": false,
         "content_width": "small",
         "text_position": "center",
         "background": "#f3e9f1",
@@ -108,7 +108,7 @@
     "section-7": {
       "type": "image-with-text-overlay",
       "settings": {
-        "full_width": true,
+        "full_width": false,
         "allow_transparent_header": false,
         "enable_parallax": false,
         "image_size": "auto",
