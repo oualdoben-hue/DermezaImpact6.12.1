@@ -52,6 +52,62 @@
         "background_gradient": ""
       }
     },
+    "image_ticker_ky3LPW": {
+      "type": "image-ticker",
+      "blocks": {
+        "image_LMRPCw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Marie_Claire_Magazine_logo.svg_1.webp",
+            "link": ""
+          }
+        },
+        "image_ktQwjU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Elle_56fb0410-6bb7-4c8d-9418-3c82aa497c08.png",
+            "link": ""
+          }
+        },
+        "image_aTTAPk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/images_3.avif",
+            "link": ""
+          }
+        },
+        "image_FEqr8m": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/logo-seo.webp",
+            "link": ""
+          }
+        },
+        "image_izJBVm": {
+          "type": "image",
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_LMRPCw",
+        "image_ktQwjU",
+        "image_aTTAPk",
+        "image_FEqr8m",
+        "image_izJBVm"
+      ],
+      "name": "Ticker Images",
+      "settings": {
+        "bg_color": "#ffffff",
+        "image_height": 80,
+        "gap": 60,
+        "speed": 10,
+        "direction": "left",
+        "padding_top": 30,
+        "padding_bottom": 30
+      }
+    },
     "section-3": {
       "type": "scrolling-text",
       "settings": {
@@ -793,6 +849,7 @@
   },
   "order": [
     "section-1",
+    "image_ticker_ky3LPW",
     "section-3",
     "rich_text_tWD7Lf",
     "section-7",
