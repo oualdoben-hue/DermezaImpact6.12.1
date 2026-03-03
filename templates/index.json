@@ -830,6 +830,103 @@
         "background_gradient": "",
         "text_color": ""
       }
+    },
+    "trustpilot_section_fkWDPH": {
+      "type": "trustpilot-section",
+      "blocks": {
+        "review_XNH77b": {
+          "type": "review",
+          "settings": {
+            "author": "Camille – Paris 🇫🇷",
+            "date": "Une révélation dans ma routine beauté.",
+            "review_text": "Je suis habituellement très exigeante avec les soins que j’utilise. J’ai testé plusieurs solutions pour ralentir la repousse, sans réel résultat durable.\nAprès plusieurs semaines avec Dermeza, j’ai constaté une repousse visiblement plus lente et des poils plus fins. La différence est progressive, mais bien réelle.\nAujourd’hui, je peux espacer mes épilations et ma peau reste douce beaucoup plus longtemps",
+            "rating": 5,
+            "show_verified": true,
+            "verified_text": "Avis vérifié"
+          }
+        },
+        "review_dhAm8A": {
+          "type": "review",
+          "settings": {
+            "author": "Nadia – Bruxelles 🇧🇪",
+            "date": "Parfait pour ma peau sensible.",
+            "review_text": "Ma peau est très sensible et réagit facilement aux produits cosmétiques, j’avais quelques appréhensions.\nAucune irritation, aucune rougeur. La texture est agréable et laisse la peau souple et confortable.\nEn plus de ralentir la repousse, ma peau est visiblement plus lisse",
+            "rating": 5,
+            "show_verified": true,
+            "verified_text": "Avis vérifié"
+          }
+        },
+        "review_qcUUnw": {
+          "type": "review",
+          "settings": {
+            "author": "Mélissa – Genève 🇨🇭",
+            "date": "Une alternative élégante au laser.",
+            "review_text": "Je cherchais une solution plus douce et plus accessible que le laser.\nAprès quelques semaines d’utilisation régulière, la repousse est clairement plus lente et plus fine. Je peux espacer mes épilations sans contrainte.\nC’est une solution rassurante et efficace.",
+            "rating": 5,
+            "show_verified": true,
+            "verified_text": "Avis vérifié"
+          }
+        },
+        "review_EEKBap": {
+          "type": "review",
+          "settings": {
+            "author": "Sofia – Luxembourg 🇱🇺",
+            "date": "Résultats visibles mais demande de la régularité.",
+            "review_text": "J’ai vu une différence après environ 3 à 4 semaines. Ce n’est pas immédiat, il faut être régulière dans l’application.\nLa repousse est plus lente et les poils plus fins, mais il faut vraiment l’utiliser tous les jours au début pour voir l’effet.\nJe continue parce que les résultats sont encourageants.",
+            "rating": 5,
+            "show_verified": true,
+            "verified_text": "Avis vérifié"
+          }
+        },
+        "review_6xhY3F": {
+          "type": "review",
+          "settings": {
+            "author": "Inès – Lyon 🇫🇷",
+            "date": "Bonne surprise, odeur naturelle.”",
+            "review_text": "J’avais un peu peur de l’odeur car certaines huiles naturelles peuvent être fortes.\nL’odeur est naturelle mais pas dérangeante, et elle disparaît rapidement.\nJe mets 4 étoiles car j’aurais aimé voir les résultats encore plus vite, mais la repousse est effectivement plus lente après quelques semaines.",
+            "rating": 5,
+            "show_verified": true,
+            "verified_text": "Avis vérifié"
+          }
+        }
+      },
+      "block_order": [
+        "review_XNH77b",
+        "review_dhAm8A",
+        "review_qcUUnw",
+        "review_EEKBap",
+        "review_6xhY3F"
+      ],
+      "name": "Avis Trustpilot",
+      "settings": {
+        "full_width": false,
+        "title_part1": "Votre",
+        "title_highlight": "satisfaction",
+        "title_part2": "fait notre succès",
+        "subtitle": "Nous valorisons votre avis",
+        "show_trustscore": true,
+        "score_label": "Trustscore",
+        "score_value": "4.9",
+        "total_reviews": "14,500+",
+        "reviews_label": "avis",
+        "show_footer": true,
+        "footer_text_before": "Basé sur",
+        "total_verified_reviews": "76,900",
+        "footer_text_after": "Avis vérifiés",
+        "background_color": "#eee8f8",
+        "title_color": "#333333",
+        "subtitle_color": "#555555",
+        "gradient_start": "#28a745",
+        "gradient_end": "#d3f9d8",
+        "card_background": "#ffffff",
+        "accent_color": "#28a745",
+        "star_color": "#28a745",
+        "footer_gradient_start": "#d3f9d8",
+        "footer_gradient_middle": "#e1f7e0",
+        "section_padding_mobile": 30,
+        "section_padding_desktop": 50,
+        "font_family": "Arial, sans-serif"
+      }
     }
   },
   "order": [
@@ -846,6 +943,7 @@
     "section-11",
     "section-12",
     "section-15",
-    "section-17"
+    "section-17",
+    "trustpilot_section_fkWDPH"
   ]
 }
