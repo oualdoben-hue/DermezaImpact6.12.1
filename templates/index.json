@@ -113,20 +113,13 @@
             "image": "shopify://shop_images/logo-seo.webp",
             "link": ""
           }
-        },
-        "image_izJBVm": {
-          "type": "image",
-          "settings": {
-            "link": ""
-          }
         }
       },
       "block_order": [
         "image_LMRPCw",
         "image_ktQwjU",
         "image_aTTAPk",
-        "image_FEqr8m",
-        "image_izJBVm"
+        "image_FEqr8m"
       ],
       "name": "Ticker Images",
       "settings": {
