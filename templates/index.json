@@ -15,7 +15,7 @@
         "block-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Keep_the_exact_same_image_comp_Nano_Banana_Pro_38307.jpg",
+            "image": "shopify://shop_images/le_meme_en_169__Nano_Banana_Pro_79662.jpg",
             "mobile_image": "shopify://shop_images/Keep_the_exact_same_image_comp_Nano_Banana_Pro_38307.jpg",
             "content_max_width": 400,
             "mobile_text_position": "place-self-center text-center",
@@ -240,6 +240,188 @@
         "text_color": "",
         "input_background": "rgba(0,0,0,0)",
         "input_text_color": ""
+      }
+    },
+    "section-18": {
+      "type": "faq",
+      "blocks": {
+        "block-1": {
+          "type": "item",
+          "settings": {
+            "title": "Est-ce que cela aide avec mes poils indésirables ?",
+            "content": "<p>Notre sérum inhibiteur de croissance des poils a été testé cliniquement pour fournir des résultats mesurables :</p><ul><li><strong>Réduit la repousse des poils</strong></li><li><strong>Affaiblit les follicules pileux</strong></li><li><strong>Prolonge le temps entre les séances d'épilation</strong></li><li><strong>Améliore la texture et la douceur de la peau</strong></li><li><strong>Formule douce adaptée aux peaux sensibles</strong></li></ul>"
+          }
+        },
+        "block-2": {
+          "type": "item",
+          "settings": {
+            "title": "Et si ça ne marche pas pour moi ?",
+            "content": "<p>Notre politique de retour de 365 jours signifie que vous pouvez essayer Dermeza en toute confiance. Nous comprenons que vous ne serez convaincu qu’une fois que vous l’aurez essayé et que vous aurez vu la différence par vous-même.</p><p>Vous disposez de 12 mois complets pour expérimenter les résultats. Si vous n'êtes pas entièrement satisfait de votre transformation, renvoyez simplement toutes les bouteilles non ouvertes et nous vous rembourserons chaque bouteille que vous retournez. Contactez simplement notre équipe et nous nous occuperons du reste.</p>"
+          }
+        },
+        "block-3": {
+          "type": "item",
+          "settings": {
+            "title": "Comment l'utiliser ?",
+            "content": "<p>Intégrez-le facilement à votre routine d'épilation en :</p><ol><li>Éliminez les poils indésirables en utilisant votre méthode préférée (rasage, épilation à la cire, épilation)</li><li>Appliquer 3 à 5 gouttes de sérum sur une peau propre et sèche</li><li>Masser doucement jusqu'à absorption complète</li><li>Réappliquer deux fois par jour pour des résultats optimaux</li></ol><p>Profitez d’une peau plus lisse plus longtemps.</p>"
+          }
+        },
+        "block-4": {
+          "type": "item",
+          "settings": {
+            "title": "Où puis-je l'appliquer ?",
+            "content": "<p>Notre sérum cutané Dermeza peut être utilisé en toute sécurité sur toutes les zones du corps, y compris le visage, les aisselles, la ligne du bikini, les jambes et les bras. Pour une utilisation faciale, évitez le contour des yeux.</p>"
+          }
+        },
+        "block-5": {
+          "type": "item",
+          "settings": {
+            "title": "Quels ingrédients sont utilisés ? (Végétalien)",
+            "content": "<p>Notre sérum cutané Dermeza est formulé avec des plantes naturelles soigneusement sélectionnées qui agissent en douceur sur votre peau sans perturber l'équilibre hormonal.</p><p>La base contient de l'huile d'olive nourrissante et de la vitamine E pour hydrater et réparer la peau après l'épilation, prévenant ainsi les irritations et les bosses de rasoir. L'extrait de menthe poivrée procure une sensation rafraîchissante et apaisante tandis que l'extrait de citron éclaircit et unifie naturellement le teint.</p><p>La liste complète des ingrédients peut être trouvée en faisant défiler cette page plus bas.</p>"
+          }
+        },
+        "block-6": {
+          "type": "item",
+          "settings": {
+            "title": "Est-ce que cela affecte mes hormones ?",
+            "content": "<p>Dermeza peut être utilisé en toute sécurité chez les femmes souffrant de troubles hormonaux, car il fonctionne <span style=\"text-decoration:underline\">localement </span>à la surface de la peau et des follicules pileux. Notre sérum botanique ne pénètre pas dans la circulation sanguine et n’affecte pas les niveaux d’hormones de votre corps. Dermeza et d’autres ingrédients naturels agissent directement là où ils sont appliqués, ciblant uniquement la structure du follicule pileux dans cette zone spécifique. Cette approche localisée signifie qu’elle n’interférera pas avec votre équilibre hormonal naturel, ce qui la rend sûre à utiliser pendant la grossesse, lors de la gestion du SOPK ou pendant la ménopause.</p>"
+          }
+        },
+        "item_EbYM4U": {
+          "type": "item",
+          "settings": {
+            "title": "Comment fonctionne Dermeza ?",
+            "content": "<p>Notre sérum cutané Dermeza cible les follicules pileux grâce à un blocage localisé des androgènes. Les composés actifs inhibent l’enzyme 5α-réductase et bloquent les récepteurs androgènes directement au niveau du follicule, réduisant ainsi la production de DHT et empêchant l’activation de la croissance des poils.</p><p>Ce mécanisme agit sur toutes les couleurs de poils - y compris les poils blancs et blonds que le laser ne peut pas traiter - en ciblant les voies hormonales plutôt que les pigments. La formule agit localement au site d’application sans effets hormonaux systémiques.</p><p>La croissance des poils ralentit en 1 à 2 semaines à mesure que les follicules reçoivent des signaux de croissance réduits, ce qui entraîne une repousse progressivement plus fine et plus clairsemée avec une utilisation continue.</p>"
+          }
+        },
+        "item_6Dp9gD": {
+          "type": "item",
+          "settings": {
+            "title": "Est-ce sans danger pour la grossesse et l’allaitement ?",
+            "content": "<p>Bien que notre sérum soit conçu pour être sans danger pendant la grossesse et l’allaitement, nous vous recommandons un contrôle rapide auprès de votre professionnel de la santé par simple précaution.</p><p>La plupart des mères utilisent notre sérum sans aucun problème et il est spécifiquement formulé pour répondre aux besoins de votre peau pendant cette période particulière. Votre médecin peut confirmer que cela convient à votre situation individuelle, vous offrant ainsi une tranquillité d’esprit totale.</p>"
+          }
+        },
+        "item_fXpybW": {
+          "type": "item",
+          "settings": {
+            "title": "Quand et d'où est-il expédié ?",
+            "content": "<p>En fonction du stock, nous expédions depuis différents entrepôts. Nous fournissons une expédition dans le monde entier avec des informations de suivi complètes pour chaque commande.</p><p>Notre établissement maintient les normes de certification ISO et tous les membres de l’équipe reçoivent une formation continue sur les dernières techniques de gestion de la qualité.</p><p>Nous avons mis en œuvre un processus d’amélioration continue où les commentaires des clients influencent directement nos procédures de fabrication.</p><p>Délais de livraison estimés :</p><p>| Europe | 4-10 jours ouvrables |</p><p>| Canada | 4 à 9 jours ouvrables |</p><p>| Reste du monde | 5 à 10 jours ouvrables |</p>"
+          }
+        }
+      },
+      "block_order": [
+        "block-1",
+        "block-2",
+        "block-3",
+        "block-4",
+        "block-5",
+        "block-6",
+        "item_EbYM4U",
+        "item_6Dp9gD",
+        "item_fXpybW"
+      ],
+      "settings": {
+        "full_width": false,
+        "subheading": "",
+        "title": "Vous avez une question?",
+        "content": "<p>Nous sommes là pour vous éclairer</p>",
+        "team_avatar_width": 160,
+        "support_hours": "Notre support client est disponible du lundi au vendredi de 8h-16h30",
+        "answer_time": "Temps moyen de réponse: 24h",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "start",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "",
+        "accordion_text_color": ""
+      }
+    },
+    "story_video_collage_VcTKNR": {
+      "type": "story-video-collage",
+      "blocks": {
+        "video_story_hCY3qn": {
+          "type": "video_story",
+          "settings": {
+            "video": "https://cdn.shopify.com/videos/c/o/v/47ee0fed4aa2493986918f01392af29d.mp4",
+            "username": "@client_satisfait",
+            "show_verified": true,
+            "likes": "2.3k",
+            "comments": "156"
+          }
+        },
+        "video_story_XYqaXV": {
+          "type": "video_story",
+          "settings": {
+            "video": "https://cdn.shopify.com/videos/c/o/v/275f81b82fb54edd9a3413ffd3324690.mp4",
+            "username": "@client_satisfait",
+            "show_verified": true,
+            "likes": "2.3k",
+            "comments": "156"
+          }
+        },
+        "video_story_EGPmep": {
+          "type": "video_story",
+          "settings": {
+            "video": "https://cdn.shopify.com/videos/c/o/v/58a8d42d743a4218bd5e3e2272456b5c.mp4",
+            "username": "@client_satisfait",
+            "show_verified": true,
+            "likes": "2.3k",
+            "comments": "156"
+          }
+        },
+        "video_story_4F7QX6": {
+          "type": "video_story",
+          "settings": {
+            "video": "",
+            "username": "@client_satisfait",
+            "show_verified": true,
+            "likes": "2.3k",
+            "comments": "156"
+          }
+        },
+        "video_story_hY8HXU": {
+          "type": "video_story",
+          "settings": {
+            "video": "",
+            "username": "@client_satisfait",
+            "show_verified": true,
+            "likes": "2.3k",
+            "comments": "156"
+          }
+        },
+        "video_story_tRAThD": {
+          "type": "video_story",
+          "settings": {
+            "video": "",
+            "username": "@client_satisfait",
+            "show_verified": true,
+            "likes": "2.3k",
+            "comments": "156"
+          }
+        }
+      },
+      "block_order": [
+        "video_story_hCY3qn",
+        "video_story_XYqaXV",
+        "video_story_EGPmep",
+        "video_story_4F7QX6",
+        "video_story_hY8HXU",
+        "video_story_tRAThD"
+      ],
+      "name": "Story Video Collage",
+      "settings": {
+        "title": "ELLES EN PARLENT LE MIEUX",
+        "subtitle": "",
+        "full_width": false,
+        "background_color_1": "rgba(0,0,0,0)",
+        "background_color_2": "rgba(0,0,0,0)",
+        "text_color": "#1a1a1a"
       }
     },
     "section-2": {
@@ -968,82 +1150,6 @@
         "background_gradient": "",
         "text_color": ""
       }
-    },
-    "section-18": {
-      "type": "faq",
-      "blocks": {
-        "block-1": {
-          "type": "item",
-          "settings": {
-            "title": "Do you ship overseas?",
-            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
-          }
-        },
-        "block-2": {
-          "type": "item",
-          "settings": {
-            "title": "Do I need to setup an account to place an order?",
-            "content": "<p>You do not need to set up an account to place an order. However creating an account allows you to store your shipping information, see order history, and view your product’s warranty information. Additional features will be added to the account page in the near future.</p>"
-          }
-        },
-        "block-3": {
-          "type": "item",
-          "settings": {
-            "title": "Do you offer gift wrapping",
-            "content": "<p>Yes, we can wrap your item in our signature box with tissue paper, and include a card with your personal message. The option is available during checkout for an additional $5. Please note this service is not available for wireless speaker purchases.</p>"
-          }
-        },
-        "block-4": {
-          "type": "item",
-          "settings": {
-            "title": "How long will it take to get my orders?",
-            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
-          }
-        },
-        "block-5": {
-          "type": "item",
-          "settings": {
-            "title": "What is your return policy?",
-            "content": "<p>All products purchased from our website may be returned within 14 days of purchase for a full refund less shipping costs, no questions asked. International return orders may be subject to return shipping fees. To initiate such a return please <a href=\"/pages/contact\" title=\"Contact\">contact us</a>.</p>"
-          }
-        },
-        "block-6": {
-          "type": "item",
-          "settings": {
-            "title": "Any question?",
-            "content": "<p>You can contact us through our <a href=\"/pages/contact\" title=\"Contact\">contact page</a>! We will be happy to assist you.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "block-1",
-        "block-2",
-        "block-3",
-        "block-4",
-        "block-5",
-        "block-6"
-      ],
-      "settings": {
-        "full_width": false,
-        "subheading": "",
-        "title": "Have a question ? We are here to help.",
-        "content": "<p>Check out the most common questions our customers asked. Still have questions ? Contact our customer support.</p>",
-        "team_avatar_width": 160,
-        "support_hours": "Our customer support is available monday to friday: 8am-8:30pm.",
-        "answer_time": "Average answer time: 24h",
-        "button_text": "",
-        "button_url": "",
-        "text_position": "start",
-        "background": "#ffffff",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "button_background": "",
-        "button_text_color": "",
-        "accordion_background": "",
-        "accordion_text_color": ""
-      }
     }
   },
   "order": [
@@ -1053,6 +1159,8 @@
     "section-7",
     "section-9",
     "section-14",
+    "section-18",
+    "story_video_collage_VcTKNR",
     "section-2",
     "section-4",
     "section-5",
@@ -1064,7 +1172,6 @@
     "section-13",
     "section-15",
     "section-16",
-    "section-17",
-    "section-18"
+    "section-17"
   ]
 }
