@@ -1,0 +1,517 @@
+{% comment %}
+  Section: Avis Trustpilot
+  Affichage responsive des avis clients
+{% endcomment %}
+
+<style>
+  .trustpilot-section-{{ section.id }} {
+    font-family: {{ section.settings.font_family }};
+    background-color: {{ section.settings.background_color }};
+    padding: {{ section.settings.section_padding_mobile }}px 0;
+  }
+
+  @media (min-width: 768px) {
+    .trustpilot-section-{{ section.id }} {
+      padding: {{ section.settings.section_padding_desktop }}px 0;
+    }
+  }
+
+  .trustpilot-header-{{ section.id }} {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .trustpilot-title-{{ section.id }} {
+    font-size: 24px;
+    font-weight: bold;
+    color: {{ section.settings.title_color }};
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: 768px) {
+    .trustpilot-title-{{ section.id }} {
+      font-size: 32px;
+    }
+  }
+
+  .trustpilot-title-{{ section.id }} .highlight {
+    background: linear-gradient(to bottom, {{ section.settings.gradient_start }} 0%, {{ section.settings.gradient_end }} 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .trustpilot-subtitle-{{ section.id }} {
+    font-size: 16px;
+    color: {{ section.settings.subtitle_color }};
+    margin-top: 5px;
+  }
+
+  .trustpilot-score-{{ section.id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #333;
+    margin-top: 15px;
+    gap: 10px;
+  }
+
+  .trustpilot-score-{{ section.id }} img {
+    max-width: 100px;
+    height: auto;
+  }
+
+  .score-text {
+    font-weight: normal;
+  }
+
+  .score-text strong {
+    font-weight: bold;
+  }
+
+  .trustpilot-reviews-container-{{ section.id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+    {% if section.settings.full_width %}
+      max-width: 100%;
+    {% else %}
+      max-width: 1200px;
+      margin: 0 auto;
+    {% endif %}
+  }
+
+  @media (min-width: 768px) {
+    .trustpilot-reviews-container-{{ section.id }} {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      {% if section.settings.full_width %}
+        padding: 0 40px;
+      {% endif %}
+    }
+  }
+
+  .review-card-{{ section.id }} {
+    background-color: {{ section.settings.card_background }};
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid {{ section.settings.accent_color }};
+  }
+
+  .review-card-{{ section.id }} .review-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+  }
+
+  .review-card-{{ section.id }} .review-author {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .review-card-{{ section.id }} .review-date {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 15px;
+  }
+
+  .review-card-{{ section.id }} .review-text {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+
+  .review-card-{{ section.id }} .review-verified {
+    font-size: 12px;
+    color: {{ section.settings.accent_color }};
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .review-stars-{{ section.id }} {
+    display: flex;
+    gap: 3px;
+  }
+
+  .review-stars-{{ section.id }} svg {
+    width: 16px;
+    height: 16px;
+    fill: {{ section.settings.star_color }};
+  }
+
+  .trustpilot-footer-{{ section.id }} {
+    background: linear-gradient(to top, {{ section.settings.footer_gradient_start }} 0%, {{ section.settings.footer_gradient_middle }} 60%, {{ section.settings.background_color }} 100%);
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .trustpilot-footer-{{ section.id }} span {
+    background-color: {{ section.settings.accent_color }};
+    color: white;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+</style>
+
+<div class="trustpilot-section-{{ section.id }}{% if section.settings.full_width %} full-width{% endif %}">
+  <div class="trustpilot-header-{{ section.id }}">
+    <h2 class="trustpilot-title-{{ section.id }}">
+      {{ section.settings.title_part1 }} <span class="highlight">{{ section.settings.title_highlight }}</span> {{ section.settings.title_part2 }}
+    </h2>
+    <p class="trustpilot-subtitle-{{ section.id }}">{{ section.settings.subtitle }}</p>
+
+    {% if section.settings.show_trustscore %}
+    <div class="trustpilot-score-{{ section.id }}">
+      {% if section.settings.stars_image != blank %}
+        <img src="{{ section.settings.stars_image | image_url: width: 200 }}" alt="5 stars" width="200" height="auto" loading="lazy">
+      {% endif %}
+      <div class="score-text">
+        {{ section.settings.score_label }} <strong>{{ section.settings.score_value }} | {{ section.settings.total_reviews }}</strong> {{ section.settings.reviews_label }}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="trustpilot-reviews-container-{{ section.id }}">
+    {% for block in section.blocks %}
+      <div class="review-card-{{ section.id }}" {{ block.shopify_attributes }}>
+        {% if block.settings.image != blank %}
+          <img src="{{ block.settings.image | image_url: width: 600 }}" alt="Témoignage {{ block.settings.author }}" class="review-image" width="600" height="200" loading="lazy">
+        {% endif %}
+        
+        <div class="review-author">{{ block.settings.author }}</div>
+        <div class="review-date">{{ block.settings.date }}</div>
+        <div class="review-text">"{{ block.settings.review_text }}"</div>
+        
+        {% if block.settings.show_verified %}
+          <div class="review-verified">✔ {{ block.settings.verified_text }}</div>
+        {% endif %}
+        
+        <div class="review-stars-{{ section.id }}">
+          {% for i in (1..block.settings.rating) %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 .587l3.668 7.431L24 9.748l-6 5.832 1.42 8.271L12 18.896l-7.42 4.955L6 15.58l-6-5.832 8.332-1.73z"/>
+            </svg>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% if section.settings.show_footer %}
+  <div class="trustpilot-footer-{{ section.id }}">
+    {{ section.settings.footer_text_before }} <span>{{ section.settings.total_verified_reviews }}</span> {{ section.settings.footer_text_after }}
+  </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Avis Trustpilot",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Mise en page"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Pleine largeur (Full Width)",
+      "default": false,
+      "info": "Activez pour étendre la section sur toute la largeur de l'écran, sans limite de 1200px."
+    },
+    {
+      "type": "header",
+      "content": "En-tête"
+    },
+    {
+      "type": "text",
+      "id": "title_part1",
+      "label": "Titre - Partie 1",
+      "default": "Votre"
+    },
+    {
+      "type": "text",
+      "id": "title_highlight",
+      "label": "Titre - Partie en surbrillance",
+      "default": "satisfaction"
+    },
+    {
+      "type": "text",
+      "id": "title_part2",
+      "label": "Titre - Partie 2",
+      "default": "fait notre succès"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Sous-titre",
+      "default": "Nous valorisons votre avis"
+    },
+    {
+      "type": "header",
+      "content": "Score Trustpilot"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_trustscore",
+      "label": "Afficher le Trustscore",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "stars_image",
+      "label": "Image des étoiles"
+    },
+    {
+      "type": "text",
+      "id": "score_label",
+      "label": "Label du score",
+      "default": "Trustscore"
+    },
+    {
+      "type": "text",
+      "id": "score_value",
+      "label": "Valeur du score",
+      "default": "4.9"
+    },
+    {
+      "type": "text",
+      "id": "total_reviews",
+      "label": "Nombre total d'avis",
+      "default": "14,500+"
+    },
+    {
+      "type": "text",
+      "id": "reviews_label",
+      "label": "Label avis",
+      "default": "avis"
+    },
+    {
+      "type": "header",
+      "content": "Pied de page"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_footer",
+      "label": "Afficher le pied de page",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "footer_text_before",
+      "label": "Texte avant le nombre",
+      "default": "Basé sur"
+    },
+    {
+      "type": "text",
+      "id": "total_verified_reviews",
+      "label": "Nombre d'avis vérifiés",
+      "default": "76,900"
+    },
+    {
+      "type": "text",
+      "id": "footer_text_after",
+      "label": "Texte après le nombre",
+      "default": "Avis vérifiés"
+    },
+    {
+      "type": "header",
+      "content": "Couleurs"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Couleur de fond",
+      "default": "#f5fdf5"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Couleur du titre",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Couleur du sous-titre",
+      "default": "#555555"
+    },
+    {
+      "type": "color",
+      "id": "gradient_start",
+      "label": "Dégradé titre - Début",
+      "default": "#28a745"
+    },
+    {
+      "type": "color",
+      "id": "gradient_end",
+      "label": "Dégradé titre - Fin",
+      "default": "#d3f9d8"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Fond des cartes",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Couleur d'accent",
+      "default": "#28a745"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Couleur des étoiles",
+      "default": "#28a745"
+    },
+    {
+      "type": "color",
+      "id": "footer_gradient_start",
+      "label": "Dégradé footer - Début",
+      "default": "#d3f9d8"
+    },
+    {
+      "type": "color",
+      "id": "footer_gradient_middle",
+      "label": "Dégradé footer - Milieu",
+      "default": "#e1f7e0"
+    },
+    {
+      "type": "header",
+      "content": "Espacement"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding section (Mobile)",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "section_padding_desktop",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding section (Desktop)",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Typographie"
+    },
+    {
+      "type": "text",
+      "id": "font_family",
+      "label": "Famille de police",
+      "default": "Arial, sans-serif"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Avis client",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image du témoignage"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Nom de l'auteur",
+          "default": "Client"
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Date de l'avis",
+          "default": "il y a 1 semaine"
+        },
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "label": "Texte de l'avis",
+          "default": "Excellent produit, je recommande vivement!"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "label": "Nombre d'étoiles",
+          "default": 5
+        },
+        {
+          "type": "checkbox",
+          "id": "show_verified",
+          "label": "Afficher badge vérifié",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "verified_text",
+          "label": "Texte badge vérifié",
+          "default": "Avis vérifié"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Avis Trustpilot",
+      "blocks": [
+        {
+          "type": "review",
+          "settings": {
+            "author": "Julia M.",
+            "date": "il y a 1 semaine",
+            "review_text": "À la fois très agréable et stimulant pour ma peau.",
+            "rating": 5
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "author": "Michaela R.",
+            "date": "il y a 5 jours",
+            "review_text": "Je suis ravie. La peau se rafraichit bien et parait éclatante et élastique",
+            "rating": 5
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "author": "Anissa T.",
+            "date": "il y a 4 jours",
+            "review_text": "Si utilisé regulièrement, il tient sa promesse. Pour moi, 1 à 2min chaque matin suffit. Et c'est agréable!",
+            "rating": 5
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
