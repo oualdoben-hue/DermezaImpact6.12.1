@@ -1,0 +1,480 @@
+{% comment %}
+  Story Video Collage Section - Customizable
+  Upload videos, choose colors, and customize text
+{% endcomment %}
+
+{% assign bg_color_1 = section.settings.background_color_1 | default: '#667eea' %}
+{% assign bg_color_2 = section.settings.background_color_2 | default: '#764ba2' %}
+{% assign text_color = section.settings.text_color | default: '#ffffff' %}
+{% assign title = section.settings.title %}
+{% assign subtitle = section.settings.subtitle %}
+{% assign full_width = section.settings.full_width %}
+
+<style>
+  .story-collage-section-{{ section.id }} {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, {{ bg_color_1 }} 0%, {{ bg_color_2 }} 100%);
+    overflow: hidden;
+    {% if full_width %}
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+    {% endif %}
+  }
+
+  .story-collage-container-{{ section.id }} {
+    {% if full_width %}
+      max-width: 100%;
+      padding: 0 40px;
+    {% else %}
+      max-width: 1400px;
+    {% endif %}
+    margin: 0 auto;
+  }
+
+  .story-collage-header-{{ section.id }} {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .story-collage-header-{{ section.id }} h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: {{ text_color }};
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+  }
+
+  .story-collage-header-{{ section.id }} p {
+    font-size: 18px;
+    color: {{ text_color | color_modify: 'alpha', 0.9 }};
+    font-weight: 400;
+  }
+
+  .story-grid-{{ section.id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    {% if full_width %}
+      max-width: 100%;
+    {% else %}
+      max-width: 1200px;
+    {% endif %}
+    margin: 0 auto;
+  }
+
+  .story-card-{{ section.id }} {
+    position: relative;
+    aspect-ratio: 9/16;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #000;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .story-card-{{ section.id }}:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .story-card-{{ section.id }} video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .story-overlay-{{ section.id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, transparent 30%, transparent 70%, rgba(0, 0, 0, 0.6) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .story-card-{{ section.id }}:hover .story-overlay-{{ section.id }} {
+    opacity: 1;
+  }
+
+  .story-username-{{ section.id }} {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .story-verified-{{ section.id }} {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #4CAF50;
+    border-radius: 50%;
+    margin-left: 5px;
+    position: relative;
+  }
+
+  .story-verified-{{ section.id }}::after {
+    content: "✓";
+    position: absolute;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .story-stats-{{ section.id }} {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    gap: 15px;
+  }
+
+  .story-modal-{{ section.id }} {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .story-modal-{{ section.id }}.active {
+    display: flex;
+  }
+
+  .story-modal-content-{{ section.id }} {
+    position: relative;
+    max-width: 500px;
+    width: 90%;
+    aspect-ratio: 9/16;
+    background: #000;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .story-modal-{{ section.id }} video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .story-modal-close-{{ section.id }} {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+  }
+
+  .story-modal-close-{{ section.id }}:hover {
+    background: #ffffff;
+    transform: rotate(90deg);
+  }
+
+  .story-modal-close-{{ section.id }}::before,
+  .story-modal-close-{{ section.id }}::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: #333;
+  }
+
+  .story-modal-close-{{ section.id }}::before {
+    transform: rotate(45deg);
+  }
+
+  .story-modal-close-{{ section.id }}::after {
+    transform: rotate(-45deg);
+  }
+
+  @media (max-width: 768px) {
+    .story-collage-section-{{ section.id }} {
+      padding: 60px 15px;
+    }
+    .story-collage-header-{{ section.id }} h2 {
+      font-size: 32px;
+    }
+    .story-grid-{{ section.id }} {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    {% if full_width %}
+      .story-collage-container-{{ section.id }} {
+        padding: 0 15px;
+      }
+    {% endif %}
+  }
+</style>
+
+<div class="story-collage-section-{{ section.id }}">
+  <div class="story-collage-container-{{ section.id }}">
+    {% if title != blank or subtitle != blank %}
+      <div class="story-collage-header-{{ section.id }}">
+        {% if title != blank %}
+          <h2>{{ title }}</h2>
+        {% endif %}
+        {% if subtitle != blank %}
+          <p>{{ subtitle }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="story-grid-{{ section.id }}">
+      {% for block in section.blocks %}
+        {% if block.settings.video != blank %}
+          <div class="story-card-{{ section.id }}" data-video="{{ block.id }}">
+            <video muted loop playsinline>
+              <source src="{{ block.settings.video }}" type="video/mp4">
+            </video>
+            {% if block.settings.username != blank %}
+              <div class="story-overlay-{{ section.id }}">
+                <div class="story-username-{{ section.id }}">
+                  {{ block.settings.username }}
+                  {% if block.settings.show_verified %}
+                    <span class="story-verified-{{ section.id }}"></span>
+                  {% endif %}
+                </div>
+                {% if block.settings.likes != blank or block.settings.comments != blank %}
+                  <div class="story-stats-{{ section.id }}">
+                    {% if block.settings.likes != blank %}
+                      <span>❤️ {{ block.settings.likes }}</span>
+                    {% endif %}
+                    {% if block.settings.comments != blank %}
+                      <span>💬 {{ block.settings.comments }}</span>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="story-modal-{{ section.id }}" id="storyModal{{ section.id }}">
+  <button class="story-modal-close-{{ section.id }}" id="closeModal{{ section.id }}"></button>
+  <div class="story-modal-content-{{ section.id }}">
+    <video id="modalVideo{{ section.id }}" controls playsinline>
+      <source src="" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<script>
+(function() {
+  const sectionId = '{{ section.id }}';
+  const cards = document.querySelectorAll('.story-card-' + sectionId);
+  const modal = document.getElementById('storyModal' + sectionId);
+  const modalVideo = document.getElementById('modalVideo' + sectionId);
+  const closeBtn = document.getElementById('closeModal' + sectionId);
+
+  // Intersection Observer pour autoplay au scroll
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5 // 50% de la vidéo doit être visible
+  };
+
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const video = entry.target.querySelector('video');
+      
+      if (entry.isIntersecting) {
+        // La vidéo est visible → play
+        video.play().catch(err => {
+          // Certains navigateurs bloquent l'autoplay
+          console.log('Autoplay bloqué:', err);
+        });
+      } else {
+        // La vidéo n'est plus visible → pause
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+  }, observerOptions);
+
+  cards.forEach(card => {
+    const video = card.querySelector('video');
+    
+    // Observer chaque card pour l'autoplay au scroll
+    videoObserver.observe(card);
+    
+    // Hover effect (optionnel - garde l'effet visuel)
+    card.addEventListener('mouseenter', () => {
+      if (video.paused) {
+        video.play();
+      }
+    });
+
+    // Click to open modal
+    card.addEventListener('click', () => {
+      const src = video.querySelector('source').src;
+      modalVideo.querySelector('source').src = src;
+      modalVideo.load();
+      modalVideo.play();
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  // Close modal
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+    modalVideo.pause();
+    modalVideo.currentTime = 0;
+    document.body.style.overflow = '';
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeBtn.click();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) closeBtn.click();
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Story Video Collage",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre",
+      "default": "Ils adorent leur CineOx Pro"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Sous-titre",
+      "default": "Découvrez les témoignages vidéo de nos clients satisfaits"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Pleine largeur",
+      "default": false,
+      "info": "Active la section en pleine largeur, ignorant les marges du thème"
+    },
+    {
+      "type": "header",
+      "content": "Couleurs"
+    },
+    {
+      "type": "color",
+      "id": "background_color_1",
+      "label": "Couleur de fond 1",
+      "default": "#667eea"
+    },
+    {
+      "type": "color",
+      "id": "background_color_2",
+      "label": "Couleur de fond 2 (dégradé)",
+      "default": "#764ba2"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Couleur du texte",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video_story",
+      "name": "Vidéo Story",
+      "settings": [
+        {
+          "type": "url",
+          "id": "video",
+          "label": "Vidéo (Upload dans Settings > Files puis colle l'URL ici)"
+        },
+        {
+          "type": "text",
+          "id": "username",
+          "label": "Nom d'utilisateur",
+          "default": "@client_satisfait",
+          "placeholder": "@username"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_verified",
+          "label": "Afficher badge vérifié",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "likes",
+          "label": "Nombre de likes",
+          "default": "2.3k",
+          "placeholder": "Ex: 1.5k"
+        },
+        {
+          "type": "text",
+          "id": "comments",
+          "label": "Nombre de commentaires",
+          "default": "156",
+          "placeholder": "Ex: 89"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Story Video Collage",
+      "blocks": [
+        {
+          "type": "video_story"
+        },
+        {
+          "type": "video_story"
+        },
+        {
+          "type": "video_story"
+        },
+        {
+          "type": "video_story"
+        },
+        {
+          "type": "video_story"
+        },
+        {
+          "type": "video_story"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
