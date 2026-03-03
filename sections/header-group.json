@@ -14,15 +14,31 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "message_rjnVfE": {
+          "type": "message",
+          "settings": {
+            "text": "LIVRAISON GRATUITE",
+            "url": ""
+          }
+        },
+        "message_xJPfdW": {
+          "type": "message",
+          "settings": {
+            "text": "OFFRE LIMITÉE-50%",
+            "url": ""
+          }
+        },
         "message": {
           "type": "message",
           "settings": {
-            "text": "Announce something here",
+            "text": "⭐️⭐️⭐️⭐️⭐️ADOPTÉ PAR 95,000+",
             "url": ""
           }
         }
       },
       "block_order": [
+        "message_rjnVfE",
+        "message_xJPfdW",
         "message"
       ],
       "settings": {
