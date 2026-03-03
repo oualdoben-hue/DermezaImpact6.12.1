@@ -14,6 +14,13 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "message_pJ8qXb": {
+          "type": "message",
+          "settings": {
+            "text": "PAIEMENT 100% SÉCURISÉ",
+            "url": ""
+          }
+        },
         "message_rjnVfE": {
           "type": "message",
           "settings": {
@@ -37,6 +44,7 @@
         }
       },
       "block_order": [
+        "message_pJ8qXb",
         "message_rjnVfE",
         "message_xJPfdW",
         "message"
