@@ -374,45 +374,12 @@
             "likes": "2.3k",
             "comments": "156"
           }
-        },
-        "video_story_4F7QX6": {
-          "type": "video_story",
-          "settings": {
-            "video": "",
-            "username": "@client_satisfait",
-            "show_verified": true,
-            "likes": "2.3k",
-            "comments": "156"
-          }
-        },
-        "video_story_hY8HXU": {
-          "type": "video_story",
-          "settings": {
-            "video": "",
-            "username": "@client_satisfait",
-            "show_verified": true,
-            "likes": "2.3k",
-            "comments": "156"
-          }
-        },
-        "video_story_tRAThD": {
-          "type": "video_story",
-          "settings": {
-            "video": "",
-            "username": "@client_satisfait",
-            "show_verified": true,
-            "likes": "2.3k",
-            "comments": "156"
-          }
         }
       },
       "block_order": [
         "video_story_hCY3qn",
         "video_story_XYqaXV",
-        "video_story_EGPmep",
-        "video_story_4F7QX6",
-        "video_story_hY8HXU",
-        "video_story_tRAThD"
+        "video_story_EGPmep"
       ],
       "name": "Story Video Collage",
       "settings": {
@@ -424,197 +391,16 @@
         "text_color": "#1a1a1a"
       }
     },
-    "section-2": {
-      "type": "image-link-blocks",
-      "blocks": {
-        "block-1": {
-          "type": "item",
-          "settings": {
-            "stretch_image": true,
-            "link_text": "Title 1",
-            "link_url": "",
-            "background": "",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "block-2": {
-          "type": "item",
-          "settings": {
-            "stretch_image": true,
-            "link_text": "Title 2",
-            "link_url": "",
-            "background": "",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "block-3": {
-          "type": "item",
-          "settings": {
-            "stretch_image": true,
-            "link_text": "Title 3",
-            "link_url": "",
-            "background": "",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "block-4": {
-          "type": "item",
-          "settings": {
-            "stretch_image": true,
-            "link_text": "Title 4",
-            "link_url": "",
-            "background": "",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "block-5": {
-          "type": "item",
-          "settings": {
-            "stretch_image": true,
-            "link_text": "Title 5",
-            "link_url": "",
-            "background": "",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        }
-      },
-      "block_order": [
-        "block-1",
-        "block-2",
-        "block-3",
-        "block-4",
-        "block-5"
-      ],
-      "name": "Image link blocks",
-      "settings": {
-        "full_width": false,
-        "block_size": "large",
-        "subheading": "",
-        "title": "",
-        "content": "",
-        "link_url": "",
-        "link_text": "",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "#1a1a1a",
-        "heading_color": "",
-        "heading_gradient": ""
-      }
-    },
-    "section-4": {
-      "type": "collection-list",
-      "blocks": {
-        "block-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-end-start text-start",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "block-2": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-end-start text-start",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "block-3": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-end-start text-start",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        }
-      },
-      "block_order": [
-        "block-1",
-        "block-2",
-        "block-3"
-      ],
-      "settings": {
-        "full_width": true,
-        "stack_collections": false,
-        "collections_per_row_mobile": "1",
-        "collections_per_row": 3,
-        "show_progress_bar": false,
-        "subheading": "",
-        "title": "Collection list",
-        "content": "",
-        "link_url": "",
-        "link_text": "View all",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": ""
-      }
-    },
-    "section-5": {
-      "type": "featured-collection",
-      "settings": {
-        "collection": "",
-        "products": [],
-        "full_width": true,
-        "stack_products": false,
-        "show_progress_bar": false,
-        "products_count": 6,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "subheading": "",
-        "title": "Best sellers",
-        "content": "",
-        "link_url": "shopify://collections/all",
-        "link_text": "View all",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "product_card_background": "",
-        "product_card_text_color": ""
-      }
-    },
     "section-6": {
       "type": "impact-text",
       "blocks": {
         "block-1": {
           "type": "item",
           "settings": {
-            "title": "Text",
-            "subheading": "Share content",
-            "content": "<p>Use this section to share helpful information with your customers. Tell a story, explain a detail, or highlight a unique feature. This is your space to connect and add personality to your store.</p>",
-            "button_text": "Shop all",
+            "title": "DERMEZA",
+            "subheading": "Le sérum anti-repousse recommandé par les dermatologues",
+            "content": "",
+            "button_text": "",
             "button_url": "shopify://collections/all",
             "animate_impact_text": false,
             "animate_impact_text_duration": 2
@@ -630,11 +416,11 @@
         "text_alignment": "center",
         "impact_text_style": "fill",
         "text_divider": "none",
-        "impact_text_size_ratio": 1,
+        "impact_text_size_ratio": 0.7,
         "background": "",
         "background_gradient": "",
         "heading_text_color": "",
-        "heading_gradient": "linear-gradient(180deg, rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0) 100%)",
+        "heading_gradient": "linear-gradient(180deg, rgba(46, 47, 94, 0.2), rgba(26, 26, 26, 0) 100%)",
         "text_color": "",
         "button_background": "",
         "button_text_color": ""
@@ -736,6 +522,7 @@
         "block-3",
         "block-4"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "reduce_width": false,
@@ -743,57 +530,6 @@
         "mobile_row_height": 150,
         "background": "",
         "background_gradient": ""
-      }
-    },
-    "section-10": {
-      "type": "press",
-      "blocks": {
-        "block-1": {
-          "type": "quote",
-          "settings": {
-            "logo_width": 120,
-            "author": "",
-            "content": "Absolutely love it! It exceeded all my expectations. The quality is top-notch, and I’ve already recommended it to several friends.",
-            "show_rating": false,
-            "rating": 4
-          }
-        },
-        "block-2": {
-          "type": "quote",
-          "settings": {
-            "logo_width": 100,
-            "author": "",
-            "content": "A game-changer — I noticed the difference right away. It’s rare to find something that delivers exactly what it promises, but this does.",
-            "show_rating": false,
-            "rating": 4
-          }
-        },
-        "block-3": {
-          "type": "quote",
-          "settings": {
-            "logo_width": 100,
-            "author": "",
-            "content": "Fast delivery, great quality, and amazing support! I had a few questions and the team was incredibly helpful and friendly throughout.",
-            "show_rating": false,
-            "rating": 4
-          }
-        }
-      },
-      "block_order": [
-        "block-1",
-        "block-2",
-        "block-3"
-      ],
-      "settings": {
-        "full_width": true,
-        "content_size": "medium",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "logo_item_background": "",
-        "logo_item_border": ""
       }
     },
     "section-11": {
@@ -841,6 +577,7 @@
         "block-2",
         "block-3"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "title": "Discover the details",
@@ -895,6 +632,7 @@
         "block-1",
         "block-2"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "stack_mobile": true,
@@ -907,47 +645,6 @@
         "heading_text_color": "#ffffff",
         "heading_gradient": "",
         "text_color": "#ffffff",
-        "button_background": "",
-        "button_text_color": ""
-      }
-    },
-    "section-13": {
-      "type": "multiple-images-with-text",
-      "blocks": {
-        "block-1": {
-          "type": "item",
-          "settings": {
-            "image_rotation_degrees": 2,
-            "subheading": "About us",
-            "title": "Designed in New York",
-            "content": "<p>Share some content about the founders, your team and your values. Pair this text with one or multiple images to create impactful visual effect.</p>",
-            "button_url": "",
-            "button_text": ""
-          }
-        },
-        "block-2": {
-          "type": "item",
-          "settings": {
-            "image_rotation_degrees": -2,
-            "subheading": "Our products",
-            "title": "Superior design",
-            "content": "<p>Share some content abour your products and what make them unique. Pair this text with one or multiple images to create impactful visual effect.</p>",
-            "button_url": "",
-            "button_text": ""
-          }
-        }
-      },
-      "block_order": [
-        "block-1",
-        "block-2"
-      ],
-      "settings": {
-        "full_width": true,
-        "images_layout": "scattered",
-        "collage_images_alignment": "middle",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
         "button_background": "",
         "button_text_color": ""
       }
@@ -1042,6 +739,7 @@
         "block-2",
         "block-3"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "subheading": "Compare",
@@ -1068,84 +766,25 @@
         "chart_true_false_color": ""
       }
     },
-    "section-16": {
-      "type": "revealed-image-on-scroll",
-      "settings": {
-        "subheading": "",
-        "title": "Outstanding products with exceptional brands",
-        "background": "",
-        "text_color_inside": "#ffffff",
-        "text_color_outside": "#000000"
-      }
-    },
     "section-17": {
       "type": "timeline",
       "blocks": {
         "block-1": {
           "type": "slide",
           "settings": {
-            "navigation_label": "2014",
-            "subheading": "The beginning",
-            "title": "Our journey starts with a simple idea",
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-          }
-        },
-        "block-2": {
-          "type": "slide",
-          "settings": {
-            "navigation_label": "2017",
-            "subheading": "First Launch",
-            "title": "Introducing our very first product to the world",
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-          }
-        },
-        "block-3": {
-          "type": "slide",
-          "settings": {
-            "navigation_label": "2018",
-            "subheading": "Early growth",
-            "title": "Building momentum and expanding the team",
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-          }
-        },
-        "block-4": {
-          "type": "slide",
-          "settings": {
-            "navigation_label": "2019",
-            "subheading": "Going global",
-            "title": "Reaching customers across continents",
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-          }
-        },
-        "block-5": {
-          "type": "slide",
-          "settings": {
-            "navigation_label": "2020",
-            "subheading": "Milestone achieved",
-            "title": "Celebrating 100,000 happy customers",
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-          }
-        },
-        "block-6": {
-          "type": "slide",
-          "settings": {
-            "navigation_label": "2021",
-            "subheading": "Stronger than ever",
-            "title": "Scaling new heights and looking ahead",
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+            "image": "shopify://shop_images/Dans_la_deuxiemd_image_remplac_Nano_Banana_Pro_44275.jpg",
+            "navigation_label": "",
+            "subheading": "",
+            "title": "Dr. Timmermans",
+            "content": "<p>En tant que praticienne, j'observe que l'un des plus grands défis post-épilation est la gestion de l'inflammation et la rapidité du cycle de repousse. La formulation de <strong>Dermeza</strong> intervient directement sur la phase anagène du poil pour en ralentir l'activité métabolique. L'application régulière permet de réduire significativement la densité pilaire tout en restaurant l'intégrité de la barrière cutanée. C'est un protocole dermo-cosmétique que je valide pour son efficacité clinique et sa capacité à minimiser les traumatismes cutanés liés aux épilations répétées. </p>"
           }
         }
       },
       "block_order": [
-        "block-1",
-        "block-2",
-        "block-3",
-        "block-4",
-        "block-5",
-        "block-6"
+        "block-1"
       ],
       "settings": {
-        "full_width": true,
+        "full_width": false,
         "background": "",
         "background_gradient": "",
         "text_color": ""
@@ -1161,17 +800,11 @@
     "section-14",
     "section-18",
     "story_video_collage_VcTKNR",
-    "section-2",
-    "section-4",
-    "section-5",
     "section-6",
     "section-8",
-    "section-10",
     "section-11",
     "section-12",
-    "section-13",
     "section-15",
-    "section-16",
     "section-17"
   ]
 }
